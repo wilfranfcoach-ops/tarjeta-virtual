@@ -5,65 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto Profesional</title>
     <style>
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            text-align: center; 
-            padding: 50px 20px; 
-            background-color: #f4f7f6;
-        }
-        h1 { color: #333; }
+        body { font-family: sans-serif; text-align: center; padding: 50px 20px; }
         .boton { 
             display: block; 
-            width: 90%; 
+            width: 80%; 
             max-width: 320px; 
-            margin: 25px auto; 
-            padding: 18px; 
+            margin: 20px auto; 
+            padding: 20px; 
             background-color: #25D366; 
             color: white; 
             text-decoration: none; 
             border-radius: 15px; 
             font-size: 18px; 
-            font-weight: bold;
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .ayuda { 
-            font-size: 14px; 
-            color: #666; 
-            margin-top: 15px; 
-            line-height: 1.5;
         }
     </style>
 </head>
 <body>
 
     <h1>¡Conectemos!</h1>
-    <p>Guarda mi contacto y escríbeme al instante.</p>
+    <p>Haz clic abajo para guardar mi contacto y escribirnos.</p>
 
     <button onclick="iniciarProceso()" class="boton">
         💾 Guardar contacto y escribirnos
     </button>
 
-    <p class="ayuda">
-        💡 <i>Nota: Si el teléfono descarga un archivo, tócalo para abrirlo y guárdalo en tu agenda.</i>
-    </p>
-
-       <script>
+    <script>
         function iniciarProceso() {
-            // 1. Descarga del contacto (vCard)
-            const link = document.createElement('a');
-            link.href = 'contacto.vcf';
-            link.click();
+            // 1. Descarga del contacto
+            // Asegúrate de que el archivo se llame 'contacto.vcf' en tu carpeta de GitHub
+            window.open('contacto.vcf', '_blank');
             
-            // 2. Espera 2 segundos para que el sistema procese la descarga 
-            // y luego salta a WhatsApp automáticamente
+            // 2. Espera 2 segundos y abre WhatsApp
             setTimeout(function() {
-                window.location.href = 'https://api.whatsapp.com/send/?phone=3052449448&text=Hola+Wilfran+de+Automation+WAS+quiero+guardar+tu+contacto+mi+nombre+es: ';
+                window.location.href = 'https://wa.me/573XXXXXXXXXX?text=Hola,%20me%20acabo%20de%20registrar.';
             }, 2000);
         }
     </script>
-
 
 </body>
 </html>
