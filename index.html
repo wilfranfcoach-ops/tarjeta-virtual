@@ -5,72 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto Profesional</title>
     <style>
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            text-align: center; 
-            padding: 50px 20px; 
-            background-color: #f4f7f6;
-        }
-        h1 { color: #333; }
+        body { font-family: sans-serif; text-align: center; padding: 40px 20px; }
         .boton { 
-            display: block; 
-            width: 90%; 
-            max-width: 320px; 
-            margin: 25px auto; 
-            padding: 18px; 
-            background-color: #25D366; 
-            color: white; 
-            text-decoration: none; 
-            border-radius: 15px; 
-            font-size: 18px; 
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: block; width: 90%; max-width: 320px; margin: 20px auto; 
+            padding: 20px; background-color: #25D366; color: white; 
+            text-decoration: none; border-radius: 15px; font-size: 18px; font-weight: bold;
         }
-        .ayuda { 
-            font-size: 14px; 
-            color: #666; 
-            margin-top: 15px; 
-            line-height: 1.5;
-        }
+        #seccionWhatsApp { display: none; margin-top: 30px; }
     </style>
 </head>
 <body>
 
     <h1>¡Conectemos!</h1>
-    <p>Haz clic abajo para guardar mi contacto y escribirnos.</p>
-
-    <a href="contacto.vcf" class="boton" onclick="iniciarProceso()">
-        💾 Guardar contacto y escribirnos
+    
+    <!-- Paso 1: Descarga directa -->
+    <a href="contacto.vcf" class="boton" onclick="mostrarPaso2()">
+        💾 1. Guardar contacto
     </a>
 
-    <p class="ayuda">
-        💡 <i>Nota: Al tocar el botón, se iniciará la descarga. <br>Por favor, abre el archivo descargado para guardarlo en tu agenda.</i>
-    </p>
+    <!-- Paso 2: Aparece solo después de hacer clic en el primero -->
+    <div id="seccionWhatsApp">
+        <p>¿Ya lo guardaste? Ahora hablemos:</p>
+        <a href="https://api.whatsapp.com/send/?phone=3052449448&text=Hola+Wilfran+de+Automation+WAS+quiero+guardar+tu+contacto+mi+nombre+es: " class="boton" style="background-color: #128C7E;">
+            💬 2. Abrir WhatsApp
+        </a>
+    </div>
 
     <script>
-        function iniciarProceso() {
-            // 1. Descarga del contacto (vCard)
-
-             window.open('contacto.vcf', '_blank');
-           
-            
-            // 2. Espera 5 segundos para que el sistema procese la descarga 
-            // y luego salta a WhatsApp automáticamente
+        function mostrarPaso2() {
+            // Mostramos el botón de WhatsApp después de 2 segundos
             setTimeout(function() {
-                <a href="https://api.whatsapp.com/send/?phone=573174353036&text=Hola+Wilfran+de+ " class="boton">
-            }, 8000);
-        }
-    </script>
-
-
-    <script>
-        function esperarYRedirigir() {
-            // Espera 4 segundos antes de llevar al usuario a WhatsApp
-            setTimeout(function() {
-                window.location.href = 'https://api.whatsapp.com/send/?phone=3052449448&text=Hola+Wilfran+de+Automation+WAS+quiero+guardar+tu+contacto+mi+nombre+es: ';
-            }, 8000);
+                document.getElementById('seccionWhatsApp').style.display = 'block';
+            }, 2000);
         }
     </script>
 
