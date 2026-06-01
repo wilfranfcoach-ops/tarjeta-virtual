@@ -51,13 +51,10 @@
 
     <script>
         function iniciarProceso() {
-            // 1. Descarga del contacto (vCard)
-            const link = document.createElement('a');
-            link.href = 'contacto.vcf';
-            link.click();
+            // 1. Abrimos el archivo en una nueva ventana (esto es menos "agresivo" que una descarga directa)
+            window.open('contacto.vcf', '_blank');
             
-            // 2. Espera 5 segundos para que el sistema procese la descarga 
-            // y luego salta a WhatsApp automáticamente
+            // 2. Esperamos 4 segundos para que el usuario procese el archivo y luego redirigimos
             setTimeout(function() {
                 window.location.href = 'https://api.whatsapp.com/send/?phone=3052449448&text=Hola+Wilfran+de+Automation+WAS+quiero+guardar+tu+contacto+mi+nombre+es: ';
             }, 4000);
