@@ -4,34 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto Profesional</title>
-   <style>
-    body {
-        font-family: sans-serif;
-        text-align: center;
-        padding: 20px;
-    }
-    .boton {
-        display: block; /* Esto hace que ocupen todo el ancho o se apilen */
-        width: 80%;     /* Tamaño cómodo para celular */
-        max-width: 300px;
-        margin: 15px auto;
-        padding: 20px;
-        background-color: #25D366;
-        color: white;
-        text-decoration: none;
-        border-radius: 15px;
-        font-size: 18px; /* Fuente grande para leer bien */
-    }
-</style>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px 20px; }
+        .boton { 
+            display: block; 
+            width: 80%; 
+            max-width: 320px; 
+            margin: 20px auto; 
+            padding: 20px; 
+            background-color: #25D366; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 15px; 
+            font-size: 18px; 
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>¡Hola! ¿Quieres guardar mi contacto?</h1>
-    <a href="contacto.vcf" download="contacto.vcf" class="boton">
-        💾 Guardar Contacto
-    </a>
 
-    <a href="https://api.whatsapp.com/send/?phone=573174353036&text=Hola+Wilfran+de+Automation+WAS+quiero+guardar+tu+contacto+mi+nombre+es: " class="boton">
-        💬 Escríbeme al WhatsApp
-    </a>
+    <h1>¡Conectemos!</h1>
+    <p>Haz clic abajo para guardar mi contacto y escribirnos.</p>
+
+    <button onclick="iniciarProceso()" class="boton">
+        💾 Guardar contacto y escribirnos
+    </button>
+
+    <script>
+        function iniciarProceso() {
+            // 1. Descarga del contacto
+            // Asegúrate de que el archivo se llame 'contacto.vcf' en tu carpeta de GitHub
+            window.open('contacto.vcf', '_blank');
+            
+            // 2. Espera 2 segundos y abre WhatsApp
+            setTimeout(function() {
+                window.location.href = 'https://wa.me/573XXXXXXXXXX?text=Hola,%20me%20acabo%20de%20registrar.';
+            }, 2000);
+        }
+    </script>
+
 </body>
 </html>
