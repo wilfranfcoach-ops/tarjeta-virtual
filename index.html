@@ -52,9 +52,9 @@
     <script>
         function iniciarProceso() {
             // 1. Descarga del contacto (vCard)
-            const link = document.createElement('a');
-            link.href = 'contacto.vcf';
-            link.click();
+
+             window.open('contacto.vcf', '_blank');
+           
             
             // 2. Espera 5 segundos para que el sistema procese la descarga 
             // y luego salta a WhatsApp automáticamente
