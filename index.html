@@ -41,13 +41,29 @@
     <h1>¡Conectemos!</h1>
     <p>Haz clic abajo para guardar mi contacto y escribirnos.</p>
 
-    <a href="contacto.vcf" class="boton" onclick="esperarYRedirigir()">
+    <a href="contacto.vcf" class="boton" onclick="iniciarProceso()">
         💾 Guardar contacto y escribirnos
     </a>
 
     <p class="ayuda">
         💡 <i>Nota: Al tocar el botón, se iniciará la descarga. <br>Por favor, abre el archivo descargado para guardarlo en tu agenda.</i>
     </p>
+
+    <script>
+        function iniciarProceso() {
+            // 1. Descarga del contacto (vCard)
+            const link = document.createElement('a');
+            link.href = 'contacto.vcf';
+            link.click();
+            
+            // 2. Espera 5 segundos para que el sistema procese la descarga 
+            // y luego salta a WhatsApp automáticamente
+            setTimeout(function() {
+                window.location.href = 'https://api.whatsapp.com/send/?phone=3052449448&text=Hola+Wilfran+de+Automation+WAS+quiero+guardar+tu+contacto+mi+nombre+es: ';
+            }, 4000);
+        }
+    </script>
+
 
     <script>
         function esperarYRedirigir() {
