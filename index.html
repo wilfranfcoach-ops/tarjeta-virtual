@@ -19,7 +19,7 @@
     <h1>¡Conectemos!</h1>
     
     <!-- Paso 1: Descarga directa -->
-    <a href="contacto.vcf" class="boton">
+    <a href="contacto.vcf" class="boton" onclick="mostrarPaso2()">
         💾 1. Guardar contacto
     </a>
 
@@ -30,6 +30,16 @@
             💬 2. Abrir WhatsApp
         </a>
     </div>
+
+    <script>
+        function mostrarPaso2() {
+            // Mostramos el botón de WhatsApp después de 2 segundos
+            setTimeout(function() {
+                document.getElementById('seccionWhatsApp').style.display = 'block';
+            }, 2000);
+        }
+    </script>
+
 
    
 
