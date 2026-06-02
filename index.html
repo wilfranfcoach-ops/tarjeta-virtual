@@ -19,26 +19,19 @@
     <h1>¡Conectemos!</h1>
     
     <!-- Paso 1: Descarga directa -->
-    <a href="contacto.vcf" class="boton" onclick="mostrarPaso2()">
+    <a href="contacto.vcf" class="boton">
         💾 1. Guardar contacto
     </a>
 
     <!-- Paso 2: Aparece solo después de hacer clic en el primero -->
    <!--  <div id="seccionWhatsApp">
-        <p>¿Ya lo guardaste? Ahora hablemos:</p>
+        <p>Confirmame por favor si pudiste guardar el contacto</p>
         <a href="https://api.whatsapp.com/send/?phone=3052449448&text=Hola+Wilfran+de+Automation+WAS+quiero+guardar+tu+contacto+mi+nombre+es: " class="boton" style="background-color: #128C7E;">
             💬 2. Abrir WhatsApp
         </a>
     </div>-->
 
-    <script>
-        function mostrarPaso2() {
-            // Mostramos el botón de WhatsApp después de 2 segundos
-            setTimeout(function() {
-                document.getElementById('seccionWhatsApp').style.display = 'block';
-            }, 7000);
-        }
-    </script>
+   
 
 </body>
 </html>
