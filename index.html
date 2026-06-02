@@ -23,6 +23,16 @@
         💾 1. Guardar contacto
     </a>
 
+
+    <script>
+        function mostrarPaso2() {
+            // Mostramos el botón de WhatsApp después de 2 segundos
+            setTimeout(function() {
+                document.getElementById('seccionWhatsApp').style.display = 'block';
+            }, 8000);
+        }
+    </script>
+    
     <!-- Paso 2: Aparece solo después de hacer clic en el primero -->
         <div id="seccionWhatsApp">
         <p>Confirmame por favor si pudiste guardar el contacto</p>
@@ -31,17 +41,6 @@
         </a>
     </div>
 
-    <script>
-        function mostrarPaso2() {
-            // Mostramos el botón de WhatsApp después de 2 segundos
-            setTimeout(function() {
-                document.getElementById('seccionWhatsApp').style.display = 'block';
-            }, 4000);
-        }
-    </script>
-
-
-   
 
 </body>
 </html>
