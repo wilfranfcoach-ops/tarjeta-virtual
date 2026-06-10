@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N: Fonnegra;Wilfran;;;Ing.
+FN: Ing. Wilfran Fonnegra
+PHOTO;TYPE=JPEG;ENCODING=BASE64:foto.jpg
+ORG: Wil Automation Systems (WAS)
+TITLE: Estratega en Automatizacion
+TEL;TYPE=CELL: 3174353036
+EMAIL: wilfranf10@hotmail.com
+NOTE: Automatizamos tus procesos y ahorramos tu tiempo.
+END:VCARD
