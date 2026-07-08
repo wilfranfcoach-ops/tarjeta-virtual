@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto Profesional</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 40px 20px; }
+        .boton { 
+            display: block; width: 90%; max-width: 320px; margin: 20px auto; 
+            padding: 20px; background-color: #25D366; color: white; 
+            text-decoration: none; border-radius: 15px; font-size: 18px; font-weight: bold;
+        }
+        #seccionWhatsApp { display: none; margin-top: 30px; }
+    </style>
+</head>
+<body>
+
+    <h1>¡Conectemos!</h1>
+    
+    <!-- Paso 1: Descarga directa -->
+    <a href="contactos/katherine-fonnegra.vcf" download="katherine-fonnegra.vcf" class="boton" onclick="mostrarPaso2()">
+        💾 1. Guardar contacto
+    </a>
+
+
+    <script>
+        function mostrarPaso2() {
+            // Mostramos el botón de WhatsApp después de 2 segundos
+            setTimeout(function() {
+                document.getElementById('seccionWhatsApp').style.display = 'block';
+            }, 10000);
+        }
+    </script>
+    
+    <!-- Paso 2: Aparece solo después de hacer clic en el primero -->
+        <div id="seccionWhatsApp">
+       
+        <a href="https://api.whatsapp.com/send/?phone=3163456085&text=Hola+Dra.+Katherine+quiero+guardar+tu+contacto+mi+nombre+es:  " class="boton" style="background-color: #128C7E;">
+            💬 2. Confirmar si pudiste guardar
+        </a>
+    </div>
+
+
+</body>
+</html>
